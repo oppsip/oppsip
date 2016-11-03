@@ -1,0 +1,8 @@
+#介绍 
+Oppsip实现了一个SIP User Agent，支持sip/2.0协议，集成了lua语言和websocket接口，用户可以方便的通过lua脚本代码实现SIP电话，B2B服务器等产品，支持web浏览器或web server通过websocket接口实现对oppsip的控制。
+#对osip的功能扩展
+Oppsip基于开源软件osip开发，并对osip做了如下扩展：
+1）对osip的transaction层进行了优化，采用stl map对transaction进行存储，大大提升了事物匹配的速度，因此，可以用于大并发的服务端开发。
+2）Oppsip不像osip一样只是一个sip协议栈，Oppsip实现了更高层的User agent功能，使得用户开发sip终端和B2B server变得简单
+3）集成了lua脚本语言，完全可以通过lua语言实现对sip协议的控制，降低了开发难度，并且基于lua语言的短小精悍和跨平台等特点，不仅适用于作为服务端开发，也可以用于嵌入式开发。
+4）集成了websocket功能，可以直接通过web浏览器的javascript脚本，实现3PCC呼叫控制功能。
